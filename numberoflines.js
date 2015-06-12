@@ -8,7 +8,6 @@ try{
 	console.log(numberOfLines.length - 1);
 }
 catch (e)
-{
-	
+{	
 	console.log(e);
 }
