@@ -1,10 +1,10 @@
 var fs = require('fs');
+var path = require('path');
 
-fs.readdir(process.argv[2], function (err, files) {
-  if (err) throw err;
-  return files.forEach(function (file) {
-    if (process.argv[3] === file.split('.').pop()) {
-      console.log(file);
+fs.readdir(process.argv[2], function (err, list) {
+  list.forEach(function (filename) {
+    if (path.extname(filename) === '.' + process.argv[3]) {
+      console.log(filename);
     }
   });
 });
